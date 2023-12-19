@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas & Keliling Lingkaran</title>
+    <style>
+        body {
+            background-color: rgb(21, 254, 9);
+            border-color: rgb(71, 255, 117);
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hitung Luas & Keliling Lingkaran</h1>
+
+    <label for="">Masukkan Jari-Jari</label>
+    <input type="number" name="jari" id="jari" onchange="hitungLingkaran()">
+
+    <p>Luas Lingkaran : <span id="luas"></span> </p>
+    <p>Keliling Lingkaran : <span id="keliling"></span> </p>
+
+    <!--Code JS-->
+    <script>
+        // Bikin Fungsi Hitung Lingkaran
+        function hitungLingkaran() {
+            //Ambil Nilai Jari-Jari
+            let jarijari = document.getElementById("jari").value;
+            //Rumus Luas
+            let luaslingaran = 3.14 * jarijari * jarijari;
+            //Rumus Keliling
+            let kelilinglingaran = 2 * 3.14 *jarijari;
+            //Tampilin Hasil
+            document.getElementById("luas").innerText = luaslingaran;
+            document.getElementById("keliling").innerText = kelilinglingaran;
+        }
+    </script>
+</body>
+</html>
